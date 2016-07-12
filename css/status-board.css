@@ -1,0 +1,221 @@
+.board_table
+{
+	width: 100%;
+	position: relative;
+}
+
+.board_table_parent
+{
+	padding: 10px;
+}
+
+.board_table table
+{
+	border-collapse: collapse;
+}
+
+.board_table table,
+.board_table th,
+.board_table td
+{
+	border: 10px solid transparent;
+}
+
+.board_head
+{
+	min-height: 3em;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	padding: 10px;
+}
+
+.board_head > div > span:nth-of-type(2)
+{
+	color: black;
+	font-weight: normal;
+	display: block;
+}
+
+.board_head.collapsed > div
+{
+	-webkit-writing-mode: vertical-rl;
+	-moz-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+}
+
+.board_cell
+{
+	vertical-align: middle;
+	padding: 5px;
+}
+
+.board_cell.collapsed
+{
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.board_cell.content
+{
+	/*background-color: transparent;*/
+	background-color: rgba(255, 255, 255, 0.8)
+}
+
+.board_cell.drop-hover
+{
+	background: lightgray;
+}
+
+.board_cell.empty
+{
+	width: 50px;
+	padding: 0;
+	background-color: transparent;
+}
+					
+div.boardItem /* large board items */
+{
+	box-shadow: 4px 4px 6px #ddd;
+	min-width: 20em;
+	padding: 6px;
+	margin: 6px;
+}
+
+span.boardItem /* small board items */
+{
+	box-shadow: 2px 2px 2px #ddd;
+	padding: 4px;
+	margin: 2px;
+	display: inline-block;
+}
+
+span.boardItem > div /* label */
+{
+	padding-left: 4px;
+	padding-right: 4px;
+	white-space: nowrap;
+	max-width: 10em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: small;
+}
+
+span.boardItem > div:nth-last-of-type(2) /* label, but only if a sublabel exists */
+{
+	font-size: smaller;
+}
+
+span.boardItem > div:nth-of-type(2) /* sublabel */
+{
+	font-size: smaller;
+}
+
+.boardItem:hover
+{
+	cursor: move;
+}
+
+.boardItem_content
+{
+	min-height: 25px;
+	overflow: hidden;
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+}
+
+.boardItem_footer
+{
+	height: auto;
+	line-height: 20px;
+	padding: 4px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.boardItem_categories
+{
+	display: flex;
+}		
+
+.boardItem_categorie
+{
+	font-size: 80%;
+	overflow: hidden;
+	background: lightgray;
+	padding: 2px;
+	margin: 2px;
+	border-radius: 4px;
+	color: gray;
+}		
+				
+.boardItem_icons
+{
+	display: flex;
+}		
+
+.boardItem_marker 
+{
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 15px solid;
+	transform: rotate(45deg);
+	float: right;
+}			
+
+.boardItem_dialog
+{
+	position: absolute;
+	display: block;
+	box-shadow: 10px 10px 12px #ddd;
+}
+
+.boardItem_dialog_header
+{
+	min-height: 2em;
+	cursor: move;
+}
+
+.boardItem_dialog_content
+{
+    overflow-y: auto;	
+	max-width: 30em;
+	max-height: 50em;
+}
+
+.clickable:hover
+{
+	cursor: pointer;
+}					
+
+.clickable:hover, .clickable:hover
+{
+	background-color: lightgray;
+	border-color: lightgray;
+	color: black;
+}
+
+.ui-widget-overlay
+{
+    z-index: 10000;
+}
+/*
+.load_indicator 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    z-index: 10000;
+}
+*/
